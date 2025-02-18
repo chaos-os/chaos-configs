@@ -23,12 +23,12 @@ set fish_greeting ''
 ###--term-cmd-apps--###
 
 alias find fd
-alias ls "exa -alh --group-directories-first --icons --git"
+alias ls "eza -alh --group-directories-first --icons --git"
 alias grep rg
 alias cat bat
 alias sudo "doas --"
 alias vim "nvim"
-alias tree "exa -a --tree --icons --group-directories-first"
+alias tree "eza -a --tree --icons --group-directories-first"
 
 ###--system-update-aliases--###
 
@@ -57,7 +57,7 @@ alias remove "paru -Qtdq | paru -Rns -"
 alias ginit "git init"
 alias gpull "git pull"
 alias gadd "git add"
-alias gcommit "git commit -m"
+alias gcommit "git commit"
 alias gpush "git push"
 alias gstat "git status"
 alias gdiff "git diff"
@@ -109,7 +109,7 @@ alias mirrorup "sudo reflector --save /etc/pacman.d/mirrorlist -a 48 -l 20 -f 5 
 
 ###--dotfiles-management-aliases--###
 alias config '/usr/bin/git --git-dir=/home/destruct/.cfg/ --work-tree=/home/destruct'
-alias config '/usr/bin/git --git-dir=/run/media/destruct/projects/git-repos/dotfiles.git/ --work-tree=/home/destruct'
+alias config '/usr/bin/git --git-dir=/run/media/destruct/projects/git-repos/mine/dotfiles.git/ --work-tree=/home/destruct'
 
 ###--kitty-kittens-aliases--###
 alias img="kitty +kitten icat"
@@ -117,6 +117,10 @@ alias img="kitty +kitten icat"
 ###--flatpak-aliases--###
 alias fupd="flatpak update"
 alias uninstall="flatpak uninstall"
+
+#-------------------------------Environment Variables---------------------------------------
+
+set -x CARGO_TARGET_DIR $HOME/.cache/target/
 
 #--------------------------------------FUNCTIONS--------------------------------------------
 
